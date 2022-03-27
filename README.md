@@ -6,7 +6,9 @@
 - [x] when user goes to main page, page should be loaded
   ![This is an image](https://github.com/xaverrevax/simple_pom/blob/main/data/193454.521_at_the_target.png)
 - [X] set source text
-- [X] rh selector
+  ![This is an image](https://github.com/xaverrevax/simple_pom/blob/main/data/203419.556_set_source_text.png)
+- [X] rh selector -  when right hand side is selected form is reset and as you can see 
+  ![This is an image](https://github.com/xaverrevax/simple_pom/blob/main/data/193454.521_at_the_target.png)
 
 
 
