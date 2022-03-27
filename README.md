@@ -13,5 +13,3 @@
 
 
 
-### images of the screens pertaining to each step
-
