@@ -4,6 +4,7 @@
 
 ### The following steps were ran and some of them passed
 - [x] when user goes to main page, page should be loaded
+  ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 - [X] set source text
 - [X] rh selector
 
