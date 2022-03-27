@@ -4,7 +4,7 @@
 
 ### The following steps were ran and some of them passed
 - [x] when user goes to main page, page should be loaded
-  ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+  ![This is an image](https://github.com/xaverrevax/simple_pom/data/193454.521_at_the_target.png)
 - [X] set source text
 - [X] rh selector
 
