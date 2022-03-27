@@ -3,12 +3,12 @@
 > Text that is a quote
 
 ### The following steps were ran and some of them passed
-- [x] when user goes to main page, page should be loaded
+- [x] when user goes to main page, page should be loaded <br />
   ![This is an image](https://github.com/xaverrevax/simple_pom/blob/main/data/193454.521_at_the_target.png)
 
-- [X] set source text
+- [X] set source text <br />
   ![This is an image](https://github.com/xaverrevax/simple_pom/blob/main/data/193459.247_set_source_text.png)
-- [X] rh selector -  when right hand side is selected form is reset and as you can see 
+- [X] rh selector -  when right hand side is selected form is reset and as you can see  <br />
   ![This is an image](https://github.com/xaverrevax/simple_pom/blob/main/data/193454.521_at_the_target.png)
 
 
