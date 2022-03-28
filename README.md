@@ -1,6 +1,6 @@
-### Sample test run using Page Object Model
+### to run this project
 
-> Text that is a quote
+> python -m unittest
 
 ### The following steps were ran and some of them passed
 - [x] when user goes to main page, page should be loaded <br />
