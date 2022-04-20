@@ -12,7 +12,7 @@
 
 >1. Based on Page Object Model, create automated test for the scenario: Using Google Translate application (https://translate.google.com/)  
 
->translated initial text using parameters in the following URL:
+>translated initial text using parameters in the following URL: http://translate.google.com/#auto/{target_lang}/{original_text}
 
 
 >▪ make sure that the actual translation result in the right field is correct 
