@@ -1,0 +1,24 @@
+data:
+  - test_case_zero: pass
+  - scenario:
+      source language: German
+      translation language: Spanish
+      original_text: "Demokratien"
+      target_lang: es
+      translated_text: "Democracias"
+      translate_url: http://translate.google.com/#auto/{target_lang}/{original_text}
+  - scenario:
+      source language: Spanish
+      translation language: German
+      target_lang: de
+      original_text: "Democracias"
+      translated_text: "Demokratien"
+      translate_url: http://translate.google.com/#auto/{target_lang}/{original_text}
+  - scenario:
+      source language: Spanish
+      translation language: German
+      target_lang: de
+      original_text: "Democracias"
+      translated_text: "Demokratien"
+      translate_url: http://translate.google.com/#auto/{target_lang}/{original_text}
+      verify_typed_text: Hi!

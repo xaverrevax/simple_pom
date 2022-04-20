@@ -4,6 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import datetime
 import time
+import yaml
+import os
+import logging
 
 
 class BasePage():
@@ -15,9 +18,25 @@ class BasePage():
     def __init__(self, driver):
         """ This function is called every time a new object of the base class is created"""
         self.driver = driver
+        self.yaml_content = None
+        self.current_path = os.path.dirname(
+            os.path.realpath(__file__))
+        self.parent_directory = os.path.abspath(
+            os.path.join(self.current_path, os.pardir))
+        self.configs_directory = os.path.abspath(
+            os.path.join(self.parent_directory, 'utils', 'config.yaml'))
+        self.load_configuration()
 
     def short_ts(self):
         return datetime.datetime.utcfromtimestamp(time.time()).strftime('%H%M%S.%f')[:-3]
+
+    def load_configuration(self):
+
+        with open(self.configs_directory, 'r') as stream:
+            try:
+                self.yaml_content = yaml.safe_load(stream)
+            except yaml.YAMLError as exc:
+                logging.error(exc)
 
     def create_screenshot(self, image_text=None):
         if not image_text:
@@ -36,6 +55,10 @@ class BasePage():
         self.driver.execute_script("arguments[0].click();", el)
         self.create_screenshot(image_text='click')
         time.sleep(0.5)
+
+    def clear_input_field(self, *locator):
+        el = self.driver.find_element(*locator)
+        el.clear()
 
     def find_and_set_text(self, text_content, *locator):
         text_area_el = self.driver.find_element(*locator)
@@ -59,6 +82,7 @@ class BasePage():
         self.create_screenshot(image_text='after_set_text')
         lang_input_el = self.driver.find_element(*lang_input_lh)
         lang_input_el.send_keys(Keys.ENTER)
+        time.sleep(4)
         self.create_screenshot(image_text='after_set_text')
 
 
@@ -69,8 +93,7 @@ class BasePage():
 
     def get_text_from_element(self, *locator):
         self.create_screenshot(image_text='before_lh_set')
-        import pdb
-        pdb.set_trace()
+
 
     def get_element(self, *locator):
         self.create_screenshot(image_text='before_lh_set')

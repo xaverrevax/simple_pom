@@ -8,8 +8,8 @@ from selenium.webdriver.chrome.options import Options
 # If you want to run it, you should type: python <module-name.py>
 
 class BaseTest(unittest.TestCase):
-
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
         options = Options()
         # options.add_argument("--headless") # Runs Chrome in headless mode.
         options.add_argument('--no-sandbox')  # # Bypass OS security model
@@ -22,10 +22,10 @@ class BaseTest(unittest.TestCase):
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--ignore-certificate-errors')
 
-        self.driver = webdriver.Chrome(options=options)
+        cls.driver = webdriver.Chrome(options=options)
         # self.driver = webdriver.Firefox()
-        self.driver.get("https://translate.google.com/")
 
-    def tearDown(self):
-        self.driver.close()
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
 

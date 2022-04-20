@@ -8,27 +8,66 @@ from utils.test_cases import test_cases
 # In this module, there should be test cases.
 # If you want to run it, you should type: python <module-name.py>
 
-class TestSignInPage(BaseTest):
+class TestTranslateGerman2Spanish(BaseTest):
 
     def test_1_page_load(self):
         print("\n" + str(test_cases(0)))
         page = MainPage(self.driver)
         self.assertTrue(page.check_page_loaded())
 
-    def test_2_set_source_language(self):
+    def test_2_navigate_to_parametrized_url(self):
+        scenario_num = 1
         print("\n" + str(test_cases(1)))
         page = MainPage(self.driver)
-        self.assertTrue(page.set_source_text())
+        self.assertTrue(page.navigate_to_parametrized_url(scenario_num))
 
-    def test_3_click_on_target_language_selector(self):
+    def test_3_check_translated_text(self):
+        scenario_num = 1
         print("\n" + str(test_cases(2)))
         page = MainPage(self.driver)
-        self.assertTrue(page.click_on_rh_selector())
+        self.assertTrue(page.check_translated_text(scenario_num))
 
-    def test_4_set_target_language(self):
+    def test_4_lang_switch(self):
         print("\n" + str(test_cases(3)))
         page = MainPage(self.driver)
-        self.assertTrue(page.set_language_in_rh_selector())
+        self.assertTrue(page.click_on_lang_switch_selector())
+
+    def test_5_check_translated_text(self):
+        scenario_num = 2
+        print("\n" + str(test_cases(4)))
+        page = MainPage(self.driver)
+        self.assertTrue(page.check_translated_text(scenario_num))
+
+    def test_6_clear_input_fields(self):
+        print("\n" + str(test_cases(5)))
+        page = MainPage(self.driver)
+        self.assertTrue(page.clear_input_text_field())
+
+    def test_7_select_input_tool(self):
+        print("\n" + str(test_cases(6)))
+        page = MainPage(self.driver)
+        self.assertTrue(page.open_keyboard())
+
+    def test_8_type_word(self):
+        scenario_num = 3
+        print("\n" + str(test_cases(7)))
+        page = MainPage(self.driver)
+        self.assertTrue(page.type_word(scenario_num))
+
+    # def test_2_set_source_language(self):
+    #     print("\n" + str(test_cases(1)))
+    #     page = MainPage(self.driver)
+    #     self.assertTrue(page.set_source_text())
+    #
+    # def test_3_click_on_target_language_selector(self):
+    #     print("\n" + str(test_cases(2)))
+    #     page = MainPage(self.driver)
+    #     self.assertTrue(page.click_on_rh_selector())
+    #
+    # def test_4_set_target_language(self):
+    #     print("\n" + str(test_cases(3)))
+    #     page = MainPage(self.driver)
+    #     self.assertTrue(page.set_language_in_rh_selector())
 
     # def test_click_and_set_lh_selector(self):
     #     print("\n" + str(test_cases(1)))
